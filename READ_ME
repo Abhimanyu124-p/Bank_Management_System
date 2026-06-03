@@ -1,0 +1,38 @@
+# Console-Based Bank Management System
+
+A robust, enterprise-structured console application that simulates real-world banking operations. Built using **Java** and **MySQL**, this project utilizes **Java Database Connectivity (JDBC)** for secure, persistent data storage and implements strict **ACID transaction compliance** for safe financial updates.
+
+---
+
+## 🚀 Key Features
+
+* **User Authentication (`Users.java`)**: Secure registration and login validation pathways directly connected to the database.
+* **Account Provisioning (`Accounts.java`)**: Automated, sequential generation of unique account numbers beginning from a default base value (`10000100`).
+* **ACID Transaction Management (`AccountManager.java`)**:
+  * Handles credits, debits, and direct peer-to-peer account transfers.
+  * Employs explicit SQL transaction management (`con.setAutoCommit(false)`, `con.commit()`, and `con.rollback()`) to eliminate data corruption or financial mismatch in the event of system failures.
+* **Console Orchestration (`BankingSystem.java`)**: A clean, responsive terminal-driven user interface wrapping all application logic securely.
+* **Secure Architecture**: Complete separation of operational code from private environment variables using a properties-driven configuration paradigm.
+
+---
+
+## 🛠️ Tech Stack & Dependencies
+
+* **Language:** Java (JDK 8 or higher)
+* **Database:** MySQL Server
+* **API:** Java Database Connectivity (JDBC)
+* **Driver:** MySQL Connector/J (Included JAR)
+
+---
+
+## 📁 Repository Structure
+
+```text
+├── src/
+│   ├── BankingSystem.java     # Main execution class and terminal UI menu
+│   ├── Accounts.java          # Handles account generation, opening, and lookups
+│   ├── AccountManager.java    # Manages financial transactions (Credit, Debit, Transfer)
+│   └── Users.java             # Manages client user accounts (Registration, Login)
+├── .gitignore                 # Excludes local environments and IDE meta from tracking
+├── config.properties.example  # Public structural template for configuration settings
+└── mysql-connector-j-x.x.x.jar# Driver necessary to establish the bridge to MySQL

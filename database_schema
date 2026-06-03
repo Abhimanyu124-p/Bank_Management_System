@@ -1,0 +1,18 @@
+CREATE DATABASE bank_db;
+USE bank_db;
+
+-- Example of accounts table schema:
+CREATE TABLE accounts (
+    account_number BIGINT PRIMARY KEY,
+    full_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    balance DECIMAL(10,2) NOT NULL,
+    security_pin CHAR(4) NOT NULL
+);
+
+-- Example of users table schema:
+CREATE TABLE users(
+full_name VARCHAR(255) NOT NULL,
+email VARCHAR(255) PRIMARY KEY,
+password VARCHAR(20) NOT NULL
+);

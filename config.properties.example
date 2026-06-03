@@ -1,0 +1,6 @@
+# Database Connection Configuration Template
+# Copy this file, rename the copy to 'config.properties', and fill in your local details.
+
+db.url=jdbc:mysql://localhost:3306/your_database_name
+db.username=your_mysql_username
+db.password=your_mysql_password
